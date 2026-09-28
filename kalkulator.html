@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Tambah/Kurang</title>
+</head>
+<body>
+
+    <h2>Kalkulator Tambah/Kurang</h2>
+
+    <table>
+        <tr>
+            <td>Bilangan 1</td>
+            <td><input type="text" id="bil1"></td>
+        </tr>
+        <tr>
+            <td>Bilangan 2</td>
+            <td><input type="text" id="bil2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button onclick="hitungTambah()">Tambah</button>
+                <button onclick="hitungKurang()">Kurang</button>
+            </td>
+        </tr>
+        <tr>
+            <td>Hasil</td>
+            <td><input type="text" id="hasil"></td>
+        </tr>
+    </table>
+
+    <script>
+        function hitungTambah() {
+            var bilangan1 = Number(document.getElementById("bil1").value);
+            var bilangan2 = Number(document.getElementById("bil2").value);
+
+            var hasilTambah = bilangan1 + bilangan2;
+
+            document.getElementById("hasil").value = hasilTambah;
+        }
+
+        function hitungKurang() {
+            var bilangan1 = Number(document.getElementById("bil1").value);
+            var bilangan2 = Number(document.getElementById("bil2").value);
+
+            var hasilKurang = bilangan1 - bilangan2;
+
+            document.getElementById("hasil").value = hasilKurang;
+        }
+    </script>
+
+</body>
+</html>
